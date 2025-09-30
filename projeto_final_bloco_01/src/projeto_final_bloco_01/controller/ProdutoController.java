@@ -2,6 +2,7 @@ package projeto_final_bloco_01.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import projeto_final_bloco_01.model.Produto;
 
@@ -67,6 +68,24 @@ public class ProdutoController implements ProdutoRepository{
 			System.out.printf("\nO Produto id: %d não foi encontrado!%n", id);
 		}
 		
+	}
+
+	
+	@Override
+	public void buscarPorNome(String nome) {
+
+	    List<Produto> produtosEncontrados = listaProdutos.stream()
+	            .filter(p -> p.getNome().toUpperCase().contains(nome.toUpperCase()))
+	            .collect(Collectors.toList());
+
+	    if (produtosEncontrados.isEmpty()) {
+	        System.out.printf("\nNenhum produto encontrado com o nome: %s%n", nome);
+	        return;
+	    }
+
+	    for (var produto : produtosEncontrados) {
+	        produto.visualizar(); 
+	    }
 	}
 
 	

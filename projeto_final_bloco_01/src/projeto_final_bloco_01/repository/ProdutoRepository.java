@@ -11,5 +11,6 @@ public interface ProdutoRepository {
 		public void atualizar(Produto produto);
 		public void procurarPorId(int id);
 		public void deletar(int id);
+		public void buscarPorNome(String nome);
 		
 	}

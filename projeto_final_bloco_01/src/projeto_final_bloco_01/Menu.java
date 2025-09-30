@@ -43,8 +43,9 @@ public class Menu {
 				System.out.println("            1 - Cadastrar Produto                    ");
 				System.out.println("            2 - Listar todos os Produtos             ");
 				System.out.println("            3 - Buscar Produto por ID                ");
-				System.out.println("            4 - Atualizar Dados do Produto           ");
-				System.out.println("            5 - Apagar Produto                       ");
+				System.out.println("            4 - Buscar Produto por nome              ");
+				System.out.println("            5 - Atualizar Dados do Produto           ");
+				System.out.println("            6 - Apagar Produto                       ");
 				System.out.println("            0 - Sair                                 ");
 				System.out.println("                                                     ");
 				System.out.println("*****************************************************");
@@ -95,19 +96,27 @@ public class Menu {
 					keyPress();
 					break;
 				case 4:
+					 System.out.println(Cores.TEXT_RED + "Buscar Produto por Nome\n\n");
+					 
+					 buscarProdutoPorNome();
+
+					 keyPress();
+					 break;
+				case 5:
 					System.out.println(Cores.TEXT_RED + "Atualizar dados do Produto\n\n");
 
 					atualizarProduto();
 					
 					keyPress();
 					break;
-				case 5:
+				case 6:
 					System.out.println(Cores.TEXT_RED + "Apagar o Produto\n\n");
 
 					deletarProduto();
 					
 					keyPress();
 					break;
+					
 				default:
 					System.out.println(Cores.TEXT_RED_BOLD + "\nOpção Inválida!\n" + Cores.TEXT_RESET);
 					keyPress();
@@ -317,5 +326,15 @@ public class Menu {
 				System.out.printf("\nA produto número %d não foi encontrada!", id);
 			}
 		}
-}
+		
+		private static void buscarProdutoPorNome() {
+
+		    System.out.print("Digite o nome do produto: ");
+		    String nome = leia.nextLine();
+
+		    produtoController.buscarPorNome(nome); 
+		}
+
+		}
+
 				
