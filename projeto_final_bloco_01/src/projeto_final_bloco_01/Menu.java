@@ -2,7 +2,9 @@ package projeto_final_bloco_01;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+import projeto_final_bloco_01.model.Pipas;
+import projeto_final_bloco_01.model.Linhas;
+import projeto_final_bloco_01.model.CarretilhasePotes;
 import projeto_final_bloco_01.Util.Cores;
 
 public class Menu {
@@ -13,6 +15,15 @@ public class Menu {
 
 			int opcao;
 
+			Pipas p1 = new Pipas(1, "Flexinha", 1, 2.00f, "Raia");
+			p1.visualizar();
+			
+			Linhas l1 = new Linhas(1, "Vera Cruz", 2, 12.00f, "500");
+			l1.visualizar();
+			
+			CarretilhasePotes cp1 = new CarretilhasePotes(1, "Carretilha Plastica", 3, 30.00f, "MD");
+			cp1.visualizar();
+			
 			// Laço de repetição que mantém o menu rodando até a opção sair ser acionada
 			while (true) {
 
@@ -58,7 +69,7 @@ public class Menu {
 				switch (opcao) {
 				case 1:
 					System.out.println(Cores.TEXT_RED + "Criar Produto\n\n");
-
+					
 					keyPress();
 					break;
 				case 2:
