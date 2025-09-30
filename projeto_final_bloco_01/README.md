@@ -45,4 +45,94 @@ Além de servir como um simulador funcional, o projeto oferece uma base prática
 ## 3. Diagrama de Classes  
 Um **Diagrama de Classes** é um modelo visual usado na programação orientada a objetos para representar a estrutura de um sistema. Ele exibe classes, atributos, métodos e os relacionamentos entre elas, como associações, heranças e dependências.  
 
-Abaixo, o Diagrama de Classes do Projeto Malvadão Pipas:  
+Abaixo, o Diagrama de Classes do Projeto Malvadão Pipas: 
+```mermaid
+classDiagram
+class Produto {
+  <<abstract>>
+  - id: int
+  - nome: String
+  - categoria: int
+  - preco: float
+  + visualizar() void
+}
+
+class Pipas {
+  - modelo: String
+  + visualizar() void
+}
+
+class Linhas {
+  - jardas: int
+  + visualizar() void
+}
+
+class CarretilhasePotes {
+  - modelo: String
+  + visualizar() void
+}
+
+Pipas --> Produto
+Linhas --> Produto
+CarretilhasePotes --> Produto
+```
+
+## 5. Requisitos
+
+<br />
+
+Para executar os códigos localmente, você precisará de:
+
+- [Java JDK 17+](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+- [Eclipse](https://eclipseide.org/) ou [STS](https://spring.io/tools)
+
+<br />
+
+## 6. Como Executar o projeto no Eclipse/STS
+
+<br />
+
+### 6.1. Importando o Projeto
+1. Clone o repositório do Projeto Final Bloco 01 (https://github.com/Rayssa-Ferraz/projeto_final_bloco_01)) dentro da pasta do *Workspace* do Eclipse/STS
+
+```bash
+git clone https://github.com/Rayssa-Ferraz/projeto_final_bloco_01
+```
+
+2. **Abra o Eclipse/STS** e selecione a pasta do *Workspace* onde você clonou o repositório do projeto
+3. No menu superior do Eclipse/STS, clique na opção: **File 🡲 Import...**
+4. Na janela **Import**, selecione a opção: **General 🡲 Existing Projects into Workspace** e clique no botão **Next**
+5. Na janela **Import Projects**, no item **Select root directory**, clique no botão **Browse...** e selecione a pasta do Workspace onde você clonou o repositório do projeto
+6. O Eclipse/STS reconhecerá automaticamente o projeto
+7. Marque o Projeto Conta Bancária no item **Projects** e clique no botão **Finish** para concluir a importação
+
+<br />
+
+### 6.2. Executando o projeto
+
+1. Na guia **Package Explorer**, localize o Projeto Conta Bancária
+2. Abra a **Classe Menu**
+3. Clique no botão **Run** <img src="https://i.imgur.com/MtBQjUp.png" title="source: imgur.com" width="3%"/> para executar a aplicação
+4. Caso seja perguntado qual é o tipo do projeto, selecione a opção **Java Application**
+5. O console exibirá o menu do Projeto.
+
+<br />
+
+## 7. Contribuição
+
+<br />
+
+Este repositório é parte de um projeto educacional, mas contribuições são sempre bem-vindas! Caso tenha sugestões, correções ou melhorias, fique à vontade para:
+
+- Criar uma **issue**
+- Enviar um **pull request**
+- Compartilhar com colegas que estejam aprendendo Java!
+
+<br />
+
+##  8. Contato
+
+<br />
+
+Desenvolvido por [**Rayssa**](https://github.com/Rayssa-Ferraz)
+Para dúvidas, sugestões ou colaborações, entre em contato via GitHub ou abra uma issue.
