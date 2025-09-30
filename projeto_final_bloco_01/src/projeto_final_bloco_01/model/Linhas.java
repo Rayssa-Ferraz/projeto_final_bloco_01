@@ -2,18 +2,18 @@ package projeto_final_bloco_01.model;
 
 public class Linhas extends Produto{
 
-	private String jardas;
+	private int jardas;
 
-	public Linhas(int id, String nome, int categoria, float preco, String jardas) {
+	public Linhas(int id, String nome, int categoria, float preco, int jardas) {
 		super(id, nome, categoria, preco);
 		this.jardas = jardas;
 	}
 
-	public String getFragrancia() {
+	public int getJardas() {
 		return jardas;
 	}
 
-	public void setFragrancia(String jardas) {
+	public void setJardas(int jardas) {
 		this.jardas = jardas;
 	}
 	

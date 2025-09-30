@@ -9,11 +9,11 @@ public class CarretilhasePotes extends Produto {
 		this.modelo = modelo;
 	}
 
-	public String getGenerico() {
+	public String getModelo() {
 		return modelo;
 	}
 
-	public void setGenerico(String modelo) {
+	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}
 
